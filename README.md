@@ -183,24 +183,3 @@ irrelevant content (e.g., drawings, watermarks, blurred/small images). This curr
 pre-cleaned dataset. It's worth noting that even further improvements to the dataset's quality would likely lead to even
 greater model accuracy.
 
-## Playground Project Disclaimer
-
-It is important to explicitly state that **this is solely a playground project designed to understand fundamental
-concepts and experiment with how fine-tuning can improve overall model performance.** This model is not intended for
-production use without further rigorous testing, validation, and potential improvements for real-world scenarios.
-
-## Tips for Training
-
-### Install on Mac with Apple Silicon
-
-To maximize training efficiency and performance, it's crucial to fully utilize available hardware accelerators. For
-users with Apple Silicon, TensorFlow with Metal Performance Shaders (MPS) provides significant speedups by leveraging
-the integrated GPU.
-
-This project's `main.py` is configured to recognize and utilize Apple Silicon's arm64 architecture, ensuring that
-TensorFlow can use the optimized backend for faster computations. Typically, you would install the `tensorflow-metal`
-package and ensure your TensorFlow and Keras versions are compatible (as seen in `requirements.txt`). If you're on a
-compatible system, this setup should automatically benefit from GPU acceleration during training. To verify if your GPU
-is being used, you can often look for logs indicating GPU device initialization when TensorFlow starts, or check your
-system's activity monitor during training. For a more direct confirmation, a simple script named `gpu_verificator.py`
-has been included in the project for this purpose.
